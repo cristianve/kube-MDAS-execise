@@ -17,7 +17,7 @@ Memoria: 256Mi
 >
 ## Creamos el POD de forma delarativa:
 
-![POD](/kube-MDAS-execise/hw-02/hw-02-01/imatges/pod.PNG)  
+![POD](./imatges/pod.PNG)  
 
 ### Pregunta 1 - ¿Cómo puedo obtener las últimas 10 líneas de la salida estándar (logs generados por la aplicación)?
 
