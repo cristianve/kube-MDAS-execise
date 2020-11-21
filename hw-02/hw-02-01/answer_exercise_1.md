@@ -1,4 +1,4 @@
-# ENTRYPOINT VS CMD 🖥⚔️ ️
+# POD NGINX 📦🌐
 
 
 ## Creacion POD NGINX SERVER:
