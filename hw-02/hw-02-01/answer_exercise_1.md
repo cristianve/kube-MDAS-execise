@@ -32,6 +32,10 @@ Memoria: 256Mi
 
 ### Pregunta 2 - ¿Cómo podría obtener la IP interna del pod? Aporta capturas para indicar el proceso que seguirías.
 
+* Utilizando el siguiente comando:  
+`` kubectl describe pod nginx-server``   
+  
+![Logs](./imatges/getIP.PNG)  
 ### Pregunta 3 - ¿Qué comando utilizarías para entrar dentro del pod?
 
 
