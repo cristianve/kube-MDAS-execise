@@ -26,6 +26,7 @@ Memoria: 256Mi
 ### Pregunta 1 - ¿Cómo puedo obtener las últimas 10 líneas de la salida estándar (logs generados por la aplicación)?
 * Utilizando el siguiente comando:  
 `` kubectl logs nginx-server --tail 10 ``   
+  
 ![Logs](./imatges/logs.PNG)  
 
 
