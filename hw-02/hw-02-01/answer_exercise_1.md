@@ -21,9 +21,12 @@ Memoria: 256Mi
 
 ## Lo ejecutamos con el siguiente comando:
 
-`` kubectl create -f pod.yaml ``
+`` kubectl create -f pod.yml ``
 
 ### Pregunta 1 - ¿Cómo puedo obtener las últimas 10 líneas de la salida estándar (logs generados por la aplicación)?
+* Utilizando el siguiente comando:  
+`` kubectl logs nginx-server --tail 10 ``
+![Logs](./imatges/logs.PNG)  
 
 
 ### Pregunta 2 - ¿Cómo podría obtener la IP interna del pod? Aporta capturas para indicar el proceso que seguirías.
