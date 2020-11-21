@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: nginx-deployment 
+  namespace: default 
+  labels:
+    app: nginx-server 
+spec:
+  revisionHistoryLimit: 3 
+  strategy:
+    type: Recreate 
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-server 
+  template: 
+    metadata:
+      labels: 
+        app: nginx-server
+    spec:
+      containers:
+      - name: nginx 
+        image: nginx:1.19.4 
+        ports:
+        - name: http
+          containerPort: 80
+        resources:
+          limits:
+            cpu: 100m
+            memory: 256Mi
+          requests: 
+            cpu: 100m
+            memory: 256Mi
