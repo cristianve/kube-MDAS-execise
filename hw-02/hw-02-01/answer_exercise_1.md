@@ -32,15 +32,29 @@ Memoria: 256Mi
 
 ### Pregunta 2 - ¿Cómo podría obtener la IP interna del pod? Aporta capturas para indicar el proceso que seguirías.
 
-* Utilizando el siguiente comando:  
+* Utilizando el siguiente comando:   
+
 `` kubectl describe pod nginx-server``   
   
 ![Logs](./imatges/getIP.PNG)  
 ### Pregunta 3 - ¿Qué comando utilizarías para entrar dentro del pod?
+* Parae entrar dentro del Pod utilizaria:  
 
+``kubectl exec -it nginx-server -- bash``
 
+![Logs](./imatges/itBash.PNG) 
 ### Pregunta 4 - Necesitas visualizar el contenido que expone NGINX, ¿qué acciones debes llevar a cabo?
+* Una vez dentro del pod en Bash acedemos al fichero "index.html" que expone por defecto, se encuentra:
 
+``cd /usr/share/nginx/html``
+
+Luego realizamos "cat" para visualizarlo/editarlo:
+
+`` cat index.html``
+
+![Logs](./imatges/index.PNG)
 
 ### Pregunta 5 - Indica la calidad de servicio (QoS) establecida en el pod que acabas de crear. ¿Qué lo has mirado?
+* La calidad del servicio sera Quaranteed, ya que los limites y las request de nuestro Pod son iguales.
 
+![Logs](./imatges/guaranteed.PNG)
