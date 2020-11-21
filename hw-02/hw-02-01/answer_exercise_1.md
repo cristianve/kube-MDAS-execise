@@ -1,30 +1,29 @@
 # ENTRYPOINT VS CMD 🖥⚔️ ️
 
-![ENV VS ENTRYPOINT](/docker-exercises/hw-01/imatges/CMDvsENV.PNG)  
 
-## ENTRYPOINT:
-La instrucción ENTRYPOINT le permite configurar un contenedor que se ejecutará como un ejecutable. 
+## Creacion POD NGINX SERVER:
+* Crea un pod de forma declarativa (fichero YML) con las siguientes especificaciones:
 
-### Ejemplo 2 formas de usar ENTRYPOINT:
-* **ENTRYPOINT** ["executable", "param1", "param2"] (exec form, preferred)
-* **ENTRYPOINT** command param1 param2 (shell form) 
+Imagen: nginx
+    Version: 1.19.4
+    Label: app: nginx-server
+    Limits
+CPU: 100 milicores
+Memoria: 256Mi
+    Requests
+CPU: 100 milicores
+Memoria: 256Mi
 
-El ENTRYPOINT es el programa que se ejecutará, y el valor pasado al contenedor se añadirá al mismo.
+### Pregunta 1 - ¿Cómo puedo obtener las últimas 10 líneas de la salida estándar (logs generados por la aplicación)?
 
 
-## CMD:
-El propósito principal de un CMD es proporcionar argumentos para un contenedor de ejecución. Nos permite lanzar comandos dentro del CMD (Símbolo del sistema) del contenedor como si estuviesemos dentro de esta.
+### Pregunta 2 - ¿Cómo podría obtener la IP interna del pod? Aporta capturas para indicar el proceso que seguirías.
 
-### Ejemplo:
-* **CMD** [“executable”,” param1”,” param2”]
-* **CMD** [“addNumbers.py”,”2”,”4”]
+### Pregunta 3 - ¿Qué comando utilizarías para entrar dentro del pod?
 
-En este caso nos permite ejecutar el fichero **addNumbers** pasandole los parámetros **2** y **4**.
 
-### Diferencia:
-* ENTRYPOINT define el ejecutable invocado cuando se inicia el contenedor (para el comando)
+### Pregunta 4 - Necesitas visualizar el contenido que expone NGINX, ¿qué acciones debes llevar a cabo?
 
-* CMD especifica los argumentos que se pasan al ENTRYPOINT (para los argumentos)
 
-### Tips
-* El ENTRYPOINT puede ser anulado especificando un indicador --entrypoint, seguido del nuevo punto de entrada que se desea utilizar.* 
+### Pregunta 5 - Indica la calidad de servicio (QoS) establecida en el pod que acabas de crear. ¿Qué lo has mirado?
+
