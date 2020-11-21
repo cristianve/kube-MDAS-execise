@@ -20,7 +20,7 @@
 
 ### Rollback a una version previa
 
-Para volver a una version previamente creada le especificamos el numero de la version
+Para volver a una version previamente creada le especificamos el numero de la version (Example revision 2):
 
 `` kubectl rollout undo deployment/app --to-revision=2``
 
