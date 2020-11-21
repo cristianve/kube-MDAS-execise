@@ -19,6 +19,10 @@ Memoria: 256Mi
 
 ![POD](./imatges/pod.PNG)  
 
+## Lo ejecutamos con el siguiente comando:
+
+`` kubectl create -f pod.yaml ``
+
 ### Pregunta 1 - ¿Cómo puedo obtener las últimas 10 líneas de la salida estándar (logs generados por la aplicación)?
 
 
